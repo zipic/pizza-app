@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "type": "pizza",
+    "image": "https://png.pngtree.com/png-vector/20230904/ourmid/pngtree-top-view-of-pizza-margherita-delicious-png-image_9980105.png",
+    "name": "Маргарита",
+    "price": 109,
+    "weight": "300 г",
+    "ingredients": "сир, томатний соус, базилік"
+  },
+  {
+    "id": 2,
+    "type": "pizza",
+    "image": "https://freepngimg.com/save/34303-pepperoni-pizza-transparent-background/500x489",
+    "name": "Пепероні",
+    "price": 129,
+    "weight": "350 г",
+    "ingredients": "салямі Пепероні, сир, томатний соус"
+  },
+  {
+    "id": 3,
+    "type": "pizza",
+    "image": "https://d2mekbzx20fc11.cloudfront.net/uploads/CRU5100_Hawaiian_600x600_tiny_classic_sticker.png",
+    "name": "Гавайська",
+    "price": 119,
+    "weight": "320 г",
+    "ingredients": "ананаси, шинка, сир, томатний соус"
+  },
+  {
+    "id": 4,
+    "type": "pizza",
+    "image": "https://i.pinimg.com/originals/20/d2/2e/20d22e9fd90b6ec066e84ac52ac747eb.png",
+    "name": "Вегетаріанська",
+    "price": 139,
+    "weight": "330 г",
+    "ingredients": "печериці, перець, цибуля, сир, томатний соус"
+  },
+  {
+    "id": 5,
+    "type": "pizza",
+    "image": "https://img.pikbest.com/origin/09/16/63/36vpIkbEsT4nr.png!w700wp",
+    "name": "Італійська",
+    "price": 149,
+    "weight": "360 г",
+    "ingredients": "куряче філе, барбекю соус, сир, томатний соус"
+  },
+  {
+    "id": 6,
+    "type": "drink",
+    "image": "https://basilico.dn.ua/upload/iblock/b27/cola.png",
+    "name": "Coca-cola",
+    "price": 30,
+    "weight": "0.5 л"
+  },
+  {
+    "id": 7,
+    "type": "drink",
+    "image": "https://pngimg.com/d/fanta_PNG46.png",
+    "name": "fanta",
+    "price": 28,
+    "weight": "0.5 л"
+  },
+  {
+    "id": 8,
+    "type": "drink",
+    "image": "https://basilico.dn.ua/upload/resize_cache/iblock/eb3/555_5555_1/pepsi.png",
+    "name": "pepsi",
+    "price": 20,
+    "weight": "0.5 л"
+  },
+  {
+    "id": 9,
+    "type": "drink",
+    "image": "https://farsonsdirect.com/cdn/shop/products/349.png?v=1691155853",
+    "name": "Lipton Tea",
+    "price": 40,
+    "weight": "0.5 л"
+  },
+  {
+    "id": 10,
+    "type": "drink",
+    "image": "https://www.fountainfoods.ru/wp-content/uploads/2019/03/borzhomi-0-33l-gaz-steklo-12-but.png",
+    "name": "borjomi",
+    "price": 18,
+    "weight": "0,5 л"
+  }
+]
