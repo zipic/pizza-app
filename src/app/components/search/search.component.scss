@@ -1,0 +1,26 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: #fff;
+  box-sizing:border-box;
+  padding: 20px;
+  width: 100%;
+
+  &__title {
+    font-size: larger;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgb(255, 106, 0);
+    border-radius: 10px;
+    padding-left: 15px;
+    outline: none;
+    background: #414040;
+    color: #fff;
+  }
+}

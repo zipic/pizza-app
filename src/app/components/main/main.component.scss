@@ -1,0 +1,23 @@
+.conteiner {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 71px;
+  padding-left: 80px;
+  padding-right: 400px;
+
+  @media (max-width:1000px) {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
+}

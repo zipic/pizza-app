@@ -1,0 +1,26 @@
+<div class="header">
+  <a class="header__link" href=""><img class="logo" src="assets/icons/logo.svg" alt="logo"></a>
+  <div class="header__right">
+    <a
+      class="header__link"
+      href="tel:+0931162788"
+    >
+      <img class="header__link-about" src="assets/icons/phone.svg" alt="phone">
+    </a>
+    <a
+      class="header__link"
+      routerLink="/about"
+    >
+      <img class="header__link-about" src="assets/icons/about.svg" alt="about">
+    </a>
+    <div class="header__buy">
+      <a
+        routerLink="/basket"
+        class="header__link-basket"
+      >
+        <img class="buy" src="assets/icons/basket.svg" alt="">
+      </a>
+      <div class="header__count" *ngIf="(count$ | async)! > 0">{{count$ | async}}</div>
+    </div>
+  </div>
+</div>

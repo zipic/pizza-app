@@ -1,0 +1,36 @@
+<div class="sidebar">
+  <button
+    class="sidebar__button"
+    (click)="setFilter('pizza')"
+  >
+  <img
+  class="sidebar__pizza"
+  *ngIf="isSelected === 'pizza'"
+  src="assets/icons/pizza-active.svg"
+  alt=""
+>
+<img
+  class="sidebar__pizza"
+  *ngIf="isSelected !== 'pizza'"
+  src="assets/icons/pizza.svg"
+  alt=""
+>
+  </button>
+  <button
+    class="sidebar__button"
+    (click)="setFilter('drink')"
+  >
+  <img
+  class="sidebar__drink"
+  *ngIf="isSelected === 'drink'"
+  src="assets/icons/drink-active.svg"
+  alt=""
+>
+<img
+  class="sidebar__drink"
+  *ngIf="isSelected !== 'drink'"
+  src="assets/icons/drink.svg"
+  alt=""
+>
+  </button>
+</div>

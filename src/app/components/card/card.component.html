@@ -1,0 +1,19 @@
+<div class="card">
+  <div *ngFor="let pizza of (filterType === 'drink' ? isDrink(filteredPizzas) : isPizza(filteredPizzas))" class="card__pizza">
+    <img class="image" src="{{ pizza.image }}" alt="Піца Маргарита">
+    <div class="box">
+    <h2 class="card__title">{{pizza.name}}</h2>
+    <p class="card__ingredients">{{pizza.ingredients}}</p>
+    <div class="card__menu">
+      <p class="price">{{pizza.price}} грн</p>
+      <p class="weight">{{pizza.weight}}</p>
+    </div>
+  </div>
+    <button
+      class="card__button"
+      (click)="addToBasket(pizza)"
+    >
+    В кошик
+  </button>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="basket" *ngIf="(items$ | async)!.length > 0">
+    <h2 class="basket__title">Ваше замовлення:</h2>
+    <div class="basket__element" *ngFor="let pizza of items$ | async">
+      <div class="delete">
+      <p class="basket__element-name">{{pizza.pizza.name}}</p>
+      <button
+        class="basket__element-delete"
+        (click)="handlerDeleteFromBasket(pizza)"
+      >
+        <img class="close" src="assets/icons/close.svg" alt="delete">
+      </button>
+      </div>
+      <img class="basket__element-img" src="{{pizza.pizza.image}}" alt="">
+      <p class="basket__element-ingredients">{{pizza.pizza.ingredients}}</p>
+      <div class="add">
+        <p class="basket__element-price">{{pizza.pizza.price * pizza.count}} грн</p>
+        <div class="buttons">
+          <button class="basket__button" (click)="handlerMinusElement(pizza)">-</button>
+          <p class="buttons__count">{{pizza.count}}</p>
+          <button class="basket__button" (click)="handlerPlusElement(pizza)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="basket__sum">
+      <p class="basket__sum-title">Сума замовлення:</p>
+      <p class="basket__sum-total">{{total$ | async}} грн</p>
+    </div>
+    <form class="basket__form" action="">
+        <input class="basket__input" type="text" placeholder="ваше імя...">
+        <input class="basket__input" type="text" placeholder="ваш мобільний">
+        <div class="form__buttons">
+          <button class="basket__form-button">Доставка</button>
+          <button class="basket__form-button">Самовивіз</button>
+        </div>
+    </form>
+  </div>
+  <div class="items" *ngIf="(items$ | async)!.length === 0">
+    <img class="items__img" src="assets/icons/basket.svg" alt="basket">
+    <p class="items__clear">Ваш кошик пустий</p>
+  </div>

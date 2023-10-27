@@ -1,0 +1,10 @@
+<div class="search">
+  <p class="search__title">{{filterType === 'drink' ? 'Напої' : 'Піцца'}}</p>
+  <input
+  [(ngModel)]="search"
+    class="search__input"
+    type="text"
+    placeholder="знайти..."
+    (input)="filterPizza($event)"
+  >
+</div>

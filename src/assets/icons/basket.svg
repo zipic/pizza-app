@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="153" height="152.21" viewBox="0 0 153 152.21">
+  <g>
+    <path d="M151,62.28a10,10,0,0,1-10,10H12a10,10,0,0,1,0-20H27L25.83,54.2A7.72,7.72,0,1,0,39,62.26l6.11-10h62.15l6.11,10a7.725,7.725,0,0,0,13.18-8.06h0l-1.18-1.92H141A10,10,0,0,1,151,62.28Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <polygon points="122.66 150.21 30.34 150.21 16.65 72.29 136.35 72.29 122.66 150.21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M44.38,93.26h0a6.45,6.45,0,0,1,6.45,6.45v21.85a6.45,6.45,0,0,1-6.45,6.45h0a6.45,6.45,0,0,1-6.45-6.45V99.71A6.45,6.45,0,0,1,44.38,93.26Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <rect x="70.05" y="93.26" width="12.9" height="34.75" rx="6.45" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <rect x="102.17" y="93.26" width="12.9" height="34.75" rx="6.45" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M69.82,9.74a7.7,7.7,0,0,1-1.13,4L45.12,52.28,39,62.26A7.72,7.72,0,1,1,25.83,54.2L27,52.28,55.51,5.7a7.72,7.72,0,0,1,14.31,4Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M124,64.82a7.73,7.73,0,0,1-10.62-2.56l-6.11-10L83.7,13.76A7.725,7.725,0,1,1,96.88,5.7l28.5,46.58,1.18,1.92A7.74,7.74,0,0,1,124,64.82Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>

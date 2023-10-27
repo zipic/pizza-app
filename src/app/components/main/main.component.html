@@ -1,0 +1,9 @@
+<div class="conteiner">
+  <app-sidebar></app-sidebar>
+  <div class="middle" id="middle">
+    <app-pizza></app-pizza>
+    <app-search [pizzas]="pizzas" (findPizza)="onFindPizza($event)"></app-search>
+    <app-card [filteredPizzas]="filteredPizzas" (addToBasketEvent)="onAddToBasket($event)"></app-card>
+  </div>
+    <app-basket></app-basket>
+</div>
