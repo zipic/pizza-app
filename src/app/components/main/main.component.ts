@@ -1,13 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { Observable, find } from 'rxjs';
 import { Pizza } from 'src/app/models/pizza.interface';
 import { Pizzas } from 'src/app/models/pizzas.interface';
 import { AppState } from 'src/app/redux/app.state';
 import { addToBasket } from 'src/app/redux/basket.action';
 import { selectBasketItems } from 'src/app/redux/basket.selector';
-import { LocalServiceService } from 'src/app/service/local-service.service';
 
 @Component({
   selector: 'app-main',
@@ -23,7 +22,7 @@ export class MainComponent implements OnInit {
   items$: Observable<Pizzas[]> = this.store.pipe(select(selectBasketItems));
 
   constructor(private http: HttpClient,
-    private store: Store<AppState>, private localService: LocalServiceService) {}
+    private store: Store<AppState>) {}
 
   ngOnInit() {
     this.http.get('assets/products.json').subscribe((data) => {

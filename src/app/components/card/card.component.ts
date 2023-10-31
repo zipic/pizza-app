@@ -1,5 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { Observable, map } from 'rxjs';
 import { Pizza } from 'src/app/models/pizza.interface';
+import { Pizzas } from 'src/app/models/pizzas.interface';
+import { AppState } from 'src/app/redux/app.state';
+import { selectBasketItems } from 'src/app/redux/basket.selector';
 import { SidebarServiceService } from 'src/app/service/sidebar-service.service';
 
 @Component({
@@ -12,8 +17,9 @@ export class CardComponent implements OnInit {
   @Input() search!:string;
   @Output() addToBasketEvent = new EventEmitter<Pizza>();
   filterType: string = '';
+  items$: Observable<Pizzas[]> = this.store.pipe(select(selectBasketItems));
 
-  constructor(public sidebarService: SidebarServiceService) {}
+  constructor(public sidebarService: SidebarServiceService, private store: Store<AppState>) {}
 
   ngOnInit(){
     this.sidebarService.filterType$.subscribe(type => {
@@ -33,4 +39,12 @@ export class CardComponent implements OnInit {
   isDrink(products: Pizza[]) {
     return products.filter(p => p.type === 'drink');
    }
+
+   isAddedForPizza(pizza: Pizza): Observable<boolean> {
+    const pizzaId = pizza.id;
+
+    return this.items$.pipe(
+      map(items => items.some(item => item.pizza.id === pizzaId))
+    );
+  }
 }

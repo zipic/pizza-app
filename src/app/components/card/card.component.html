@@ -1,6 +1,8 @@
 <div class="card">
   <div *ngFor="let pizza of (filterType === 'drink' ? isDrink(filteredPizzas) : isPizza(filteredPizzas))" class="card__pizza">
-    <img class="image" src="{{ pizza.image }}" alt="Піца Маргарита">
+    <div class="image-box">
+      <img class="image" src="{{ pizza.image }}" alt="Піца Маргарита">
+    </div>
     <div class="box">
     <h2 class="card__title">{{pizza.name}}</h2>
     <p class="card__ingredients">{{pizza.ingredients}}</p>
@@ -9,11 +11,11 @@
       <p class="weight">{{pizza.weight}}</p>
     </div>
   </div>
-    <button
+    <button [ngClass]="{'active': (isAddedForPizza(pizza) | async) }"
       class="card__button"
       (click)="addToBasket(pizza)"
     >
-    В кошик
+    {{(isAddedForPizza(pizza) | async) ? 'У кошику' : 'В кошик'}}
   </button>
   </div>
 </div>
