@@ -16,6 +16,7 @@ import { MainComponent } from './components/main/main.component';
 import { StoreModule } from '@ngrx/store';
 import { basketReducer } from './redux/basket.reducer';
 import { AboutComponent } from './components/about/about.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AboutComponent } from './components/about/about.component';
     MyBasketComponent,
     MainComponent,
     AboutComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

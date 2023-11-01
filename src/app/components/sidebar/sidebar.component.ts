@@ -7,11 +7,11 @@ import { SidebarServiceService } from 'src/app/service/sidebar-service.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  isSelected: string = ''
+  isSelected: string = 'pizza';
   constructor(public sidebarService: SidebarServiceService) {}
 
   setFilter(type: string) {
     this.sidebarService.setFilterType(type);
-    this.isSelected = type
+    this.isSelected = type;
   }
 }

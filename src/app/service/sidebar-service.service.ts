@@ -9,6 +9,6 @@ export class SidebarServiceService {
   filterType$ = this.filterTypeSubject.asObservable();
 
   setFilterType(type: string) {
-    this.filterTypeSubject.next(type);
+    this.filterTypeSubject.next(type) ;
   }
 }

@@ -1,0 +1,12 @@
+<form class="form" action="">
+  <input class="form__input" type="text" placeholder="ваше імя...">
+  <input
+    class="form__input"
+    type="text" placeholder="ваш мобільний"
+    (input)="handlerPhoneFormat($event)"
+  >
+  <div class="form__buttons">
+    <button class="form__button">Доставка</button>
+    <button class="form__button">Самовивіз</button>
+  </div>
+</form>

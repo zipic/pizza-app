@@ -16,7 +16,8 @@ export class BasketComponent {
 
   items$: Observable<Pizzas[]> = this.store.pipe(select(selectBasketItems));
   total$: Observable<number> = this.store.pipe(select(selectBasketTotalPrice));
-  count$: Observable<number> = this.store.pipe(select(selectBasketItemCount))
+  count$: Observable<number> = this.store.pipe(select(selectBasketItemCount));
+
 
   constructor(private store: Store<AppState>) {}
 
