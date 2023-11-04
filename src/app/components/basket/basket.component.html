@@ -20,6 +20,7 @@
           <button class="basket__button" (click)="handlerPlusElement(pizza)">+</button>
         </div>
       </div>
+      <app-remove-menu [pizza]="pizza" *ngIf="(items$ | async)!.length > 0 && pizza.isRemoved"></app-remove-menu>
     </div>
     <div class="basket__sum">
       <p class="basket__sum-title">Сума замовлення:</p>

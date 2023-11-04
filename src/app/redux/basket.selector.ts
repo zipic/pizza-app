@@ -17,3 +17,14 @@ export const selectBasketTotalPrice = createSelector(
   selectBasketItems,
   (items) => items.reduce((total, item) => total + (item.pizza.price * item.count), 0)
 );
+
+export const selectRemoveItem = createSelector(
+  selectBasketItems,
+  (item) => item
+);
+
+export const selectRemovedItems = createSelector(
+  selectBasketState,
+  (state: BasketState) => state.items.filter(item => item.isRemoved)
+);
+

@@ -3,7 +3,7 @@ import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Pizzas } from 'src/app/models/pizzas.interface';
 import { AppState } from 'src/app/redux/app.state';
-import { minusItem, plusItem, removeFromBasket } from 'src/app/redux/basket.action';
+import { hideDelete, minusItem, plusItem, removeFromBasket, showDelete } from 'src/app/redux/basket.action';
 import { selectBasketItemCount, selectBasketItems, selectBasketTotalPrice } from 'src/app/redux/basket.selector';
 
 @Component({
@@ -26,10 +26,12 @@ export class BasketComponent {
   }
 
   handlerPlusElement(pizza : Pizzas) {
-    this.store.dispatch(plusItem({item: pizza}))
+    this.store.dispatch(plusItem({item: pizza}));
+    this.store.dispatch(hideDelete({item : pizza}));
   }
 
   handlerMinusElement(pizza: Pizzas) {
     this.store.dispatch(minusItem({item: pizza}));
+    this.store.dispatch(showDelete({item: pizza}))
   }
 }

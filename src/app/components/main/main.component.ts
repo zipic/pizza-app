@@ -39,7 +39,7 @@ export class MainComponent implements OnInit {
   }
 
   onAddToBasket(pizza: Pizza) {
-      const newItem: Pizzas = { pizza, count: 1, total: pizza.price };
+      const newItem: Pizzas = { pizza, count: 1, total: pizza.price, isRemoved: false };
       this.store.dispatch(addToBasket({item: newItem}));
   }
 }

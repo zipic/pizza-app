@@ -1,0 +1,40 @@
+.remove {
+  display: flex;
+  margin: 20px auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 300px;
+  height: 200px;
+  border: 1px solid orange;
+  border-radius: 20px;
+
+  &__buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+
+    &-yes {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: red;
+      border: 2px solid black;
+      color: #000;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &-no {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: greenyellow;
+      border: 2px solid black;
+      color: #000;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

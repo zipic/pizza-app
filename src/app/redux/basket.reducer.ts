@@ -50,13 +50,44 @@ export const basketReducer = createReducer(
   }),
   on(BasketActions.minusItem, (state, action) => {
     const updatedItems = state.items.map(item =>
-      item.pizza.id === action.item.pizza.id && item.count > 1 ?
-      { ...item, count: item.count - 1, total: item.pizza.price * (item.count - 1) } : item
+      item.pizza.id === action.item.pizza.id && item.count > 0 ?
+      { ...item, count: item.count - 1, total: item.pizza.price * (item.count - 1)} : item
     );
 
     return {
       ...state,
       items: updatedItems
+    };
+  }),
+
+  on(BasketActions.showDelete, (state, action) => {
+    return {
+      ...state,
+      items: state.items.map(item => {
+        if (item.pizza.id === action.item.pizza.id && item.count === 0) {
+          return {
+            ...item,
+            isRemoved: true,
+            count: item.count + 1,
+          };
+        }
+        return item;
+      })
+    };
+  }),
+
+  on(BasketActions.hideDelete, (state, action) => {
+    return {
+      ...state,
+      items: state.items.map(item => {
+        if (item.pizza.id === action.item.pizza.id || item.count > 1) {
+          return {
+            ...item,
+            isRemoved: false,
+          };
+        }
+        return item;
+      })
     };
   })
 );

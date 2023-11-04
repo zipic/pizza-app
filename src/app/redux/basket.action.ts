@@ -11,3 +11,5 @@ export const add = createAction('Add', (item: Pizzas) => ({
   item,
   saveToLocalStorage: true
 }));
+export const showDelete = createAction('[Basket] Delete', props<{item: Pizzas}>());
+export const hideDelete = createAction('[Basket] Cancel', props<{item: Pizzas}>());
